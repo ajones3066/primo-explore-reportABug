@@ -5,7 +5,7 @@ app.controller('reportABugController', [function () {
     
      //binds the function to the scope so it's requestable in the component.
      vm.getRecordID = getRecordID;
-     vm.linkText = "Report A Problem 2";
+     vm.linkText = "Report A Problem";
      vm.linkBase = "http:\/\/www.google.com?q=";
 
      //define the function that retrieves the record ID
