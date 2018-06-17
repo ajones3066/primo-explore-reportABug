@@ -6,6 +6,7 @@ app.controller('reportABugController', [function () {
      //binds the function to the scope so it's requestable in the component.
      vm.getRecordID = getRecordID;
      vm.linkText = "Report A Problem 2";
+     vm.linkBase = "http:\/\/www.google.com?q=";
 
      //define the function that retrieves the record ID
      function getRecordID() {
@@ -17,6 +18,6 @@ app.controller('reportABugController', [function () {
 app.component('prmServiceLinksAfter', {
      bindings: {parentCtrl: '<'},
      controller: 'reportABugController',
-     template: `<span class="md-subhead"><a href="http:\/\/www.google.com?q={{$ctrl.getRecordID()}}" target="_blank">{{ $ctrl.linkText }}</a></span>`
+     template: `<span class="md-subhead"><a href="{{ $ctrl.linkBase }}{{ $ctrl.getRecordID() }}" target="_blank">{{ $ctrl.linkText }}</a></span>`
 
  });
